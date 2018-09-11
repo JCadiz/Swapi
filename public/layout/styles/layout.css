@@ -119,6 +119,12 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #copyright{padding:20px 0;}
 #copyright *{margin:0; padding:0;}
+#copy{background-color: white;
+	color: black;}
+#copy a{
+	background-color: white;
+	color: rgb(87, 87, 87);
+}
 
 
 /* Transition Fade
@@ -220,15 +226,17 @@ td{border-width:0 1px;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
 
-.faico a{color:#FFFFFF; background-color:#FF5723;}
+.faico a{color:black; background-color:lightgray;}
 .faico a:hover{}
 
-.faicon-dribble:hover{background-color:#EA4C89;}
+.faicon-shop:hover{background-color:darkblue;}
 .faicon-facebook:hover{background-color:#3B5998;}
 .faicon-google-plus:hover{background-color:#DB4A39;}
 .faicon-linkedin:hover{background-color:#0E76A8;}
 .faicon-twitter:hover{background-color:#00ACEE;}
-.faicon-vk:hover{background-color:#4E658E;}
+.faicon-youtube:hover{background-color: red;}
+.faicon-tumblr:hover{background-color: #35465c;}
+.faicon-blog:hover{background-color:black;}
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -241,7 +249,7 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#CBCBCB; background-color:#222222;}
-a{color:#FF5723;}
+a{color: rgb(68, 68, 68);}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
@@ -297,7 +305,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF5723;}
 .pagination a, .pagination strong{border-color:#D7D7D7;}
 .pagination .current *{color:#FFFFFF; background-color:#FF5723;}
 
-#backtotop{color:#FFFFFF; background-color:#FF5723;}
+#backtotop{color:black !important; background-color:gray;}
 
 
 /* Tables + Comments */
@@ -312,7 +320,7 @@ table a, #comments a{background-color:inherit;}
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------ */
 
 
