@@ -12,7 +12,7 @@ class Starships extends Component{
           }
         }
         componentWillMount(){
-            axios.get('https://swapi.co/api/starships')
+            axios.get('https://swapi.co/api/starships/')
           .then((response)=> {
             console.log(response)
             this.setState({sships: response.data.results})
@@ -24,11 +24,11 @@ class Starships extends Component{
         var sships = this.state.sships.map(function(sship){
             return <div className="row pnt">
                     <div className="col-sm-4">
-                        <div className="img" key={sship.id}>
-                        <img src={'../../public/img/starships/pag-1/' + sship.name +'.png'} alt="image"/>
+                        <div className="img-ss" key={sship.id}>
+                        <img src={"./img/starships/" + sship.model.split(" ").join("-").split("/").join("-").toLowerCase()+".png"}  alt={sship.model.split(" ").join("-").split("/").join("-").toLowerCase()}/>
                         </div>
                     </div>
-            <div className="col-sm-8">
+            <div className="col-sm-8 txt">
                 <h5 className="title">{sship.name}</h5>
                     <ul className="list-group list-group-flush">
                     <li className="list-group-item">Model: {sship.model}.</li>

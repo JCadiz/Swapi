@@ -26,10 +26,10 @@ class Planets extends Component{
             return <div className="row pnt">
                     <div className="col-sm-4">
                         <div className="img" key={plan.id}>
-                        <img src={'../img/planets/pag-1/' + plan.name +'.png'} alt="image"/>
+                        <img src={"./img/planets/" + plan.name.split(" ").join("-").split("/").join("-").toLowerCase()+".png"}  alt={plan.name.split(" ").join("-").split("/").join("-").toLowerCase()}/>
                         </div>
                     </div>
-            <div className="col-sm-8">
+            <div className="col-sm-8 txt">
                 <h5 className="title">{plan.name}</h5>
                     <ul className="list-group list-group-flush">
                     <li className="list-group-item">Diameter: {plan.diameter}km.</li>
