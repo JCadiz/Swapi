@@ -1,0 +1,39 @@
+.faico a{color:black; background-color:lightgray;}
+.faicon-shop:hover{background-color:darkblue;}
+.faicon-facebook:hover{background-color:#3B5998;}
+.faicon-google-plus:hover{background-color:#DB4A39;}
+.faicon-linkedin:hover{background-color:#0E76A8;}
+.faicon-twitter:hover{background-color:#00ACEE;}
+.faicon-youtube:hover{background-color: red;}
+.faicon-tumblr:hover{background-color: #35465c;}
+.faicon-blog:hover{background-color:black;}
+
+#backtotop{color:black !important; background-color:gray;}
+
+/*PAGINAS*/
+.pnt{
+    border-style: solid !important;
+    border-color: goldenrod; 
+    margin: 20px;
+    padding: 10px;
+}
+
+.img-ss{
+    height:300px;
+    width:300px;
+}
+.txt{
+    margin:auto;
+    text-align: center;
+}
+
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+#copy{background-color: white;
+    color: black;}
+#copy a{
+    background-color: white;
+    color: rgb(87, 87, 87);
+}
+
+a{color: rgb(68, 68, 68);}

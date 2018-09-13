@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import axios from 'axios';
+
 
 //importando cada pagina 
 import Home from './views/Home.jsx';
