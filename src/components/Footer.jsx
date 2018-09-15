@@ -10,7 +10,7 @@ class Footer extends Component{
       
                     <div className="one_third first">
                         <h6 className="heading">Star Wars</h6>
-                        <p><i>Star Wars</i> is an American epic space opera franchise centered around a film series begun by George Lucas with the eponymous 1977 film. The saga quickly became a worldwide pop culture phenomenon.</p>
+                        <p className="text-justify"><i>Star Wars</i> is an American epic space opera franchise centered around a film series begun by George Lucas with the eponymous 1977 film. The saga quickly became a worldwide pop culture phenomenon.</p>
                         <p className="btmspace-15"></p>
             </div>
             <div className="one_third">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/home.css';
 import '../css/characters.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 //importando los componentes de la pagina 
 import Navbar from '../components/Navbar.jsx';
@@ -54,37 +55,23 @@ class Characters extends Component{
                     <h4 className="card-title text-center">{ personaje.name }</h4>
                 </div>
                 <ul className="list-group">
-                    <li>
+                    <li className="list-group-item">
                         <Esp species={personaje.species[0]}></Esp>
                     </li>
-                    <li>
+                    <li className="list-group-item">
                         <Pla homeworld={ personaje.homeworld }></Pla>
                     </li>
                 </ul>
-                <button className="btn btn-link p5" data-toggle="modal" data-target={'#portafoliomodal'+personaje.name.split(' ').join('_').toLowerCase()}>
-                    Films
-                </button> 
-            </div>;
-
-           
-                <div className="modal fade" id={'portafoliomodal'+personaje.name.split(' ').join('_').toLowerCase()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div className="modal-dialog" role="document">
-                            <div className="modal-content w-100">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel"> Participation of { personaje.name }:</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div className="modal-body">
-                                <Films films={ personaje.films }> </Films>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary " data-dismiss="modal">Close </button>
-                            </div>
-                            </div>
-                        </div>
-                </div>;
+                <Link to={{
+                            pathname: "/character/"+personaje.name.split(' ').join('-').toLowerCase(),
+                            state: {
+                                url: personaje.url,
+                            }
+                        }} className="modal-body text-center fuente">
+                           Films
+                </Link>
+                        
+            </div>
         });
         return(
             <div>

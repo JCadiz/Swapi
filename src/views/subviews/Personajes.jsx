@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Films extends Component {
+class Personajes extends Component {
     constructor(props){
         super(props);
 
@@ -10,14 +10,15 @@ class Films extends Component {
             url: this.props.url,
         }
 
-        this.getDetailMovies(this.state.url);
+        this.getDetailCharacter(this.state.url);
     }
 
-    getDetailMovies = (url) => {
+    getDetailCharacter = (url) => {
         axios.get(url)
             .then((response) => {
                 //console.log(response);
                 this.setState({ character: response.data });
+                console.log(this.character)
             }).catch((error) => {
                 console.log(error)
             })
@@ -26,9 +27,9 @@ class Films extends Component {
         return( 
                 <div >
                     <div className=" d-flex flex-wrap flex-row justify-content-around mx-1 mb-3">
-                        <div className="card card2 col-md-3 mb-3 mx-3 mt-3" key={  this.state.character.episode_id }>
+                        <div className="card card2 col-md-3 mb-3 mx-3 mt-3" key={  this.state.character.id }>
                             <div className="card-body">
-                                <h5 className="card-title text-center">{  this.state.character.title }</h5>
+                                <h5 className="card-title text-center">{  this.state.character.name }</h5>
                             </div>
                         </div>                    
                     </div>
@@ -37,4 +38,4 @@ class Films extends Component {
     }
 }
 
-export default Films;
+export default Personajes;

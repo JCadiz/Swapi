@@ -8,6 +8,8 @@ import Characters from './views/Characters.jsx';
 import Planets from './views/Planets.jsx';
 import Ships from './views/Ships.jsx';
 import Starships from './views/Starships.jsx';
+import MovieDetails from './views/MovieDetails.jsx';
+import CharacterDetails from './views/CharacterDetails.jsx';
 
 //importando componentes 
 import Footer from './components/Footer.jsx';
@@ -25,6 +27,8 @@ class App extends Component {
           <Router>
             <div>
               <Route exact path="/" component={Home}/>
+              <Route path="/movie/:movie" component={MovieDetails} />
+              <Route path="/character/:character" component={CharacterDetails} />
               <Route path="/Characters" component={Characters}/>
               <Route path="/Planets" component={Planets}/>
               <Route path="/Ships" component={Ships}/>

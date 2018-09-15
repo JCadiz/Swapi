@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="shortcut icon" href="./logo.ico">
     <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
     <title>Star Wars</title>
     <style>
@@ -14,8 +14,31 @@
         overflow: hidden;
       }
 
+      .color{
+        color:white;
+      }
+      
+      .card2{
+        width: 18rem;
+      }
+
       ::-webkit-scrollbar {
         width: 0;
+      }
+
+      .fuente{
+        font-family: starjedi;
+      }
+
+      h1,h2,h3,h4,h5{
+        font-family: starjedi;
+      }
+
+      @font-face {
+          font-family: "starjedi";
+          font-style: normal;
+          font-weight: normal;
+          src: local("?"), url("./fonts/Starjedi.eot") format("eot"), url("./fonts/Starjedi.ttf") format("truetype");
       }
     </style>
   </head>
