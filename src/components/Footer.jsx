@@ -14,7 +14,7 @@ class Footer extends Component{
               <p className="btmspace-15"></p>
             </div>
             <div className="one_third">
-              <h6 className="heading">luctus vestibulum magna</h6>
+              <h6 className="heading">Contact info</h6>
               <ul className="nospace linklist contact">
                 <li><i className="fa fa-map-marker"></i>
                   <address>
