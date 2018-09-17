@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../css/planets.css';
 
 //importando los componentes de la pagina 
 import Navbar from '../components/Navbar.jsx';
@@ -44,18 +45,19 @@ class Starships extends Component{
     }
     render(){
         var Estelares = this.state.cruceros.map(function(crucero){
-            return <div className="col-3 card mb-3 mx-3 mt-3 tarjeta" key={crucero.name.split(' ').join('_').toLowerCase()}>
+            return <div className="col-3 card-body mb-3 mx-3 mt-3 tarjeta" key={crucero.name.split(' ').join('_').toLowerCase()}>
                         <img className="card-img-top img-thumbnail tarjeta" src={require('../img/starships/' + crucero.model.split(" ").join("-").split("/").join("-").toLowerCase()+ '.png')}  alt={crucero.model.split(" ").join("-").split("/").join("-").toLowerCase()}/>
-                        <div className="card-body">
+                        <div className="card">
                             <h4 className="card-title text-center">{ crucero.name }</h4>
-                        </div>
+                       
                         <ul className="list-group">
                             <li className="list-group-item"><strong>Model: </strong>{crucero.model}.</li>
                             <li className="list-group-item"><strong>Manufacturer: </strong>{crucero.manufacturer}.</li>
                             <li className="list-group-item"><strong>Crew: </strong>{crucero.crew}.</li>
                             <li className="list-group-item"><strong>Passengers: </strong>{crucero.passengers}.</li>
                         </ul>
-                    </div>;
+                    </div>
+                </div>
           }) 
         return(
             <div>

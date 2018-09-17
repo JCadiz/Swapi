@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/home.css';
 import '../css/characters.css';
 import axios from 'axios';
+import '../css/planets.css';
 import { Link } from 'react-router-dom';
 
 //importando los componentes de la pagina 
@@ -48,11 +49,11 @@ class Characters extends Component{
       }
     render(){
         var Persons = this.state.personajes.map(function(personaje){
-            return <div className="card col-3 mb-3 mx-3 mt-3 tarjeta" key={personaje.name.split(' ').join('_').toLowerCase()}>
+            return <div className="card-body col-3 mb-3 mx-3 mt-3 tarjeta" key={personaje.name.split(' ').join('_').toLowerCase()}>
                     <img className="card-img-top img-thumbnail img tarjeta" src={require('../img/personajes/' + personaje.name.split(' ').join('_').toLowerCase() + '.png')} alt={personaje.name.split(' ').join('_').toLowerCase()} />
-                <div className="card-body">
+                <div className="card">
                     <h4 className="card-title text-center">{ personaje.name }</h4>
-                </div>
+            
                 <ul className="list-group">
                     <li className="list-group-item">
                         <Esp species={personaje.species[0]}></Esp>
@@ -69,7 +70,7 @@ class Characters extends Component{
                         }} className="modal-body text-center fuente">
                            Films
                 </Link>
-                        
+                </div>      
             </div>
         });
         return(

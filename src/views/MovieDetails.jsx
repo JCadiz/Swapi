@@ -47,7 +47,7 @@ class MovieDetails extends Component {
 
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
-                    <Link type="button" className="btn btn-primary m-3" to="/" >Go Back</Link>
+                    <Link type="button" className="btn btn-primary btn-dark m-3" to="/" >Go Back</Link>
                     </div>  
                 </div>
             </div>

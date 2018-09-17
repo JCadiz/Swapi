@@ -14,3 +14,18 @@
   .card-title{
     margin-top: 10px;
   }
+
+  .card-body2{
+    background-color:transparent;
+    border: solid 5px; 
+    border-color: #f8f8f5;
+    text-align: center;
+    
+  }
+  
+  .card2{
+    border: solid 10px;
+    border-color: #f8f8f5;
+  }
+  
+

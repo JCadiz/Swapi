@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../css/planets.css';
 
 //importando los componentes de la pagina 
 import Navbar from '../components/Navbar.jsx';
@@ -43,11 +44,11 @@ class Ships extends Component{
       }
     render(){
         var vehicles = this.state.naves.map(function(nave){
-            return <div className="col-3 card mb-3 mx-3 mt-3 tarjeta" key={nave.name.split(' ').join('_').toLowerCase()}>
+            return <div className="col-3 card-body mb-3 mx-3 mt-3 tarjeta" key={nave.name.split(' ').join('_').toLowerCase()}>
                         <img className="card-img-top img-thumbnail tarjeta" src={require('../img/vehicles/' + nave.model.split(" ").join("-").split("/").join("-").toLowerCase()+'.png')}  alt={nave.model.split(" ").join("-").split("/").join("-").toLowerCase()}/>
-                    <div className="card-body">
+                    <div className="card">
                         <h4 className="card-title text-center">{ nave.name }</h4>
-                    </div>
+                   
                     <ul className="list-group">
                         <li className="list-group-item"><strong>Model: </strong>{nave.model}.</li>
                         <li className="list-group-item"><strong>Manufacturer: </strong>{nave.manufacturer}.</li>
@@ -56,7 +57,8 @@ class Ships extends Component{
                         <li className="list-group-item"><strong>Passengers: </strong>{nave.passengers}.</li>
                         <li className="list-group-item"><strong>Vehicle class: </strong>{nave.vehicle_class}.</li> 
                     </ul>
-                  </div>;
+                  </div>
+                </div>
           }) 
         return(
             <div>
