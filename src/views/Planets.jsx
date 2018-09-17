@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../css/planets.css';
 
 //importando los componentes de la pagina 
 import Navbar from '../components/Navbar.jsx';
@@ -43,12 +44,12 @@ class Planets extends Component{
     }
     render(){
         var Planet = this.state.planetas.map(function(planeta){
-            return <div className="card col-3 mb-3 mx-3 mt-3 tarjeta" key={planeta.name.split(' ').join('_').toLowerCase()}>
+            return <div className="card-body col-3 mb-3 mx-3 mt-3 tarjeta" key={planeta.name.split(' ').join('_').toLowerCase()}>
                     <img className="card-img-top img-thumbnail img tarjeta" src={require('../img/planets/' + planeta.name.split(" ").join("-").split("/").join("-")+ '.png')} alt={planeta.name.split(" ").join("-").split("/").join("-").toLowerCase()} />
                     
-                    <div className="card-body">
+                    <div className="card">
                         <h4 className="card-title text-center">{ planeta.name }</h4>
-                    </div>
+                   
                         <ul className="list-group">
                             <li className="list-group-item"><strong>Diameter:</strong> {planeta.diameter}km.</li>
                             <li className="list-group-item"><strong>Climate:</strong> {planeta.climate}</li>
@@ -56,7 +57,8 @@ class Planets extends Component{
                             <li className="list-group-item"><strong>Surface water:</strong> {planeta.surface_water} cfs.</li>
                             <li className="list-group-item"><strong>Population:</strong> {planeta.population} people.</li>
                         </ul>
-                     </div>; 
+                     </div>
+                </div> 
           })
         return(
             <div>
@@ -72,9 +74,9 @@ class Planets extends Component{
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
                         <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.previousV(this.state.previous, e)}
-                        >Previous</button>
+                        disabled={ this.state.previous == null } >Previous</button>
                         <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.nextV(this.state.next , e)}
-                        >Next</button>
+                        disabled={ this.state.next == null } >Next</button>
                     </div>  
                 </div>
 

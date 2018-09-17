@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar.jsx';
 import Esp from './subviews/Esp.jsx';
 import Pla from './subviews/Pla.jsx';
-import Films from './subviews/Films.jsx';
 
 class Characters extends Component{
     constructor (props){
@@ -50,7 +49,7 @@ class Characters extends Component{
     render(){
         var Persons = this.state.personajes.map(function(personaje){
             return <div className="card col-3 mb-3 mx-3 mt-3 tarjeta" key={personaje.name.split(' ').join('_').toLowerCase()}>
-                    <img className="card-img-top img-thumbnail img tarjeta" src={require('../img/personajes/' + personaje.name.split(' ').join('_').toLowerCase() + '.jpg')} alt={personaje.name.split(' ').join('_').toLowerCase()} />
+                    <img className="card-img-top img-thumbnail img tarjeta" src={require('../img/personajes/' + personaje.name.split(' ').join('_').toLowerCase() + '.png')} alt={personaje.name.split(' ').join('_').toLowerCase()} />
                 <div className="card-body">
                     <h4 className="card-title text-center">{ personaje.name }</h4>
                 </div>
@@ -86,9 +85,9 @@ class Characters extends Component{
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
                     <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.previousV(this.state.previous, e)}
-                    >Previous</button>
+                   disabled={ this.state.previous == null } >Previous</button>
                     <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.nextV(this.state.next , e)}
-                    >Next</button>
+                    disabled={ this.state.next == null } >Next</button>
                     </div>  
                 </div>
 

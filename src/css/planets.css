@@ -1,0 +1,16 @@
+.card-body{
+    background-color:transparent;
+    border: solid 5px; 
+    border-color: #ffd700;
+    text-align: center;
+    
+  }
+  
+  .card{
+    border: solid 10px;
+    border-color: #ffd700;
+  }
+  
+  .card-title{
+    margin-top: 10px;
+  }

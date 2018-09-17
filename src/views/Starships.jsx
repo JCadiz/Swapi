@@ -70,9 +70,9 @@ class Starships extends Component{
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
                     <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.previousV(this.state.previous, e)}
-                    >Previous</button>
+                    disabled={ this.state.previous == null } >Previous</button>
                     <button type="button" className="btn btn-primary btn-dark m-3" onClick={e => this.nextV(this.state.next , e)}
-                    >Next</button>
+                    disabled={ this.state.next == null } >Next</button>
                     </div>  
                 </div>
 
